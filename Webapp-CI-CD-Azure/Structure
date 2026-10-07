@@ -1,0 +1,21 @@
+Webapp-CI-CD-Azure/
+│
+├── src/
+│   └── Webapp/                 # Your ASP.NET project from Visual Studio
+│
+├── azure-devops/
+│   ├── ci-pipeline.yml         # Your full CI YAML
+│   ├── release-pipeline.md     # Documentation of your CD pipeline
+│   └── screenshots/            # Pipeline runs, logs, Azure DevOps UI
+│
+├── azure-app-service/
+│   ├── architecture.png        # Diagram of your deployment
+│   ├── publish-profile-note.md # Explain ARM vs publish profile
+│
+├── docs/
+│   ├── PROJECT_OVERVIEW.md
+│   ├── ARCHITECTURE.md
+│   ├── PIPELINE_FLOW.md
+│   └── TROUBLESHOOTING.md
+│
+└── README.md                   # Main portfolio README
