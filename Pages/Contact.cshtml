@@ -1,0 +1,39 @@
+@page
+@model Myproject.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<h1>Contact</h1>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Input.Name" class="form-label"></label>
+        <input asp-for="Input.Name" class="form-control" />
+        <span asp-validation-for="Input.Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Input.Email" class="form-label"></label>
+        <input asp-for="Input.Email" class="form-control" />
+        <span asp-validation-for="Input.Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Input.Subject" class="form-label"></label>
+        <input asp-for="Input.Subject" class="form-control" />
+        <span asp-validation-for="Input.Subject" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Input.Message" class="form-label"></label>
+        <textarea asp-for="Input.Message" class="form-control" rows="6"></textarea>
+        <span asp-validation-for="Input.Message" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send</button>
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+</form>
